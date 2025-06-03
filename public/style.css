@@ -42,6 +42,7 @@ li a {
     margin-right: auto;
     width: 90%;
     padding: 2rem;
+    background-color: transparent;
 }
 
 form {
@@ -139,6 +140,7 @@ fieldset {
 }
 .ratings-section {
   border: 1px solid lightblue;
+  display: block;
   padding: 1.5rem;
   border-radius: 10px;
   background-color: #f4fbff;
@@ -279,6 +281,7 @@ button:hover {
     padding: 1rem;
     margin: 1rem;
   }
+  
   .top-row{
     flex-direction: column;
     align-items: stretch;
@@ -337,7 +340,6 @@ button:hover {
     width: 95%;
     padding: 1.5rem;
     margin: 1rem auto;
-    background-color: #63acff;
   }
   .top-row {
     flex-direction: column;
