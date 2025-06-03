@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background: transparent;
+}
+nav {
+    background-color: transparent;
+    height: 5rem;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 75rem;
+    position: relative;
+    top: 0;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li {
+    float: right;
+}
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem;
+}
+.container {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 2rem;
+}
+
+form {
+    margin: 0 auto;
+}
+input, textarea {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid rgb(28, 91, 163);
+    padding: 0.75rem;
+    font-size: 1rem;
+
+}
+.input{
+    width: 20rem;
+    border: 2px solid lightblue;
+    
+}
+.top-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personal {
+  width: 30%;
+  margin-left: 5%;
+}
+
+.personal-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.personal-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  margin-left: 10%;
+}
+
+fieldset {
+  margin-top: 1rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.favourite-food {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1000px;
+  padding: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid lightblue;
+  border-radius: 8px;
+}
+
+.favourite-food label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.favourite-food label:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+.favourite-food input[type="checkbox"] {
+  accent-color: lightblue;
+  width: 18px;
+  height: 18px;
+}
+.ratings-section {
+  border: 1px solid lightblue;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #f4fbff;
+  margin-top: 1.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.ratings-section legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.scale-info {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Make table inside responsive */
+.ratings-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.ratings-section th,
+.ratings-section td {
+  border: 1px solid lightblue;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.ratings-section th {
+  background-color: #e0f7fa;
+  font-weight: bold;
+}
+
+.ratings-section td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+.ratings-table input[type="radio"] {
+  accent-color: mediumseagreen;         
+  appearance: none;                     
+  width: 18px;
+  height: 18px;
+  border: 2px solid lightblue;     
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.ratings-table input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.ratings-table input[type="radio"]:hover {
+  box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.3);
+}
+button {
+  background-color: #63acff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem auto 0 auto;
+  font-size: 1rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.responsive-form {
+  max-width: 150rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+input {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 10rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ Mobile responsive adjustments */
+@media screen and (max-width: 420px) {
+  .responsive-form {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .top-row{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  input,
+  button {
+    font-size: 0.95rem;
+  }
+}
+/* Responsive tweaks for small screens */
+@media (max-width: 650px) {
+  .ratings-section {
+    padding: 1rem;
+  }
+
+  .ratings-section table,
+  .ratings-section thead,
+  .ratings-section tbody,
+  .ratings-section th,
+  .ratings-section td,
+  .ratings-section tr {
+    display: block;
+    width: 100%;
+  }
+
+  .ratings-section thead {
+    display: none;
+  }
+
+  .ratings-section tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  .ratings-section td {
+    text-align: left;
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  .ratings-section td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #0077b6;
+  }
+  
+}
+@media (max-width: 700px) {
+    .container {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    background-color: #63acff;
+  }
+  .top-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .personal {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .line {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.results-grid h2 {
+  grid-column: 1 / -1;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.results-grid p {
+  margin: 0;
+  font-weight: 500;
+  color: #444;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+

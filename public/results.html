@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Survey Results</title>
+  <nav class="navbar">
+    <h4>_Survey App</h4>
+    <ul>
+      <li><a href="index.html">Fill Out Survey</a></li>
+      <li><a href="results.html">View Survey Results</a></li>
+    </ul>
+  </nav>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+     <h1>Survey Results</h1>
+  <div id="results" class="results-grid"></div>
+  <script>
+  fetch('/results')
+    .then(res => res.json())
+    .then(data => {
+      const div = document.getElementById('results');
+
+      const show = (value, suffix = '') =>
+        value !== undefined && value !== null && value !== 'NaN'
+          ? `${value}${suffix}`
+          : 'Not Rated';
+
+      if (data.message) {
+        div.innerText = data.message;
+      } else {
+        div.innerHTML = `
+          <h2>General Info</h2>
+          <p>Total Surveys: ${show(data.total)}</p>
+          <p>Average Age: ${show(data.avgAge)}</p>
+          <p>Oldest Participant: ${show(data.oldest)}</p>
+          <p>Youngest Participant: ${show(data.youngest)}</p>
+
+          <h2>Food Preferences</h2>
+          <p>% Who Like Pizza: ${show(data.pizzaPercent, '%')}</p>
+          <p>% Who Like Pasta: ${show(data.PastaLovers, '%')}</p>
+          <p>% Who Like Pap and Wors: ${show(data.Pap_WorsPercent, '%')}</p>
+          <p>% Who Like Other: ${show(data.OtherPercent, '%')}</p>
+
+          <h2>Activity Ratings</h2>
+          <p>Avg Watch Movies: ${show(data.avgMovies)}</p>
+          <p>Avg Eat Out: ${show(data.avgEatOut)}</p>
+          <p>Avg Watch TV: ${show(data.avgWatchTv)}</p>
+          <p>Avg Listen to Radio: ${show(data.avgRadio)}</p>
+        `;
+      }
+    });
+</script>
+
+
+  </div>
+ 
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Survey App</title>
+  <link rel="stylesheet" href="style.css">
+  <nav class="navbar">
+    <h4>_Survey App</h4>
+    <ul>
+      <li><a href="index.html">Fill Out Survey</a></li>
+      <li><a href="results.html">View Survey Results</a></li>
+    </ul>
+  </nav>
+
+</head>
+<body>
+  <div class="container">
+     <form id="surveyForm" class="responsive-form"> 
+    <div class="top-row"> 
+    <div class="personal">
+      <label class="personal-label">Personal Details:</label>
+    </div>
+
+    <div class="line">
+      <div class="form-group">
+        <label>Full Names: </label><br>
+        <input type="text" name="name" class="input" required />
+      </div>
+      <label>Email: </label><br> 
+      <input type="email" name="email" class="input" required /><br>
+      <label>Date of Birth: </label><br>
+      <input type="date" name="date" class="input" required /><br>
+      <label>Contact Number: </label><br>
+      <input type="text" name="contacts" class="input" required />
+    </div>
+  </div>
+
+    <fieldset class="favourite-food">
+      <legend>Favourite Food</legend>
+      <label><input type="checkbox" value="Pizza" />Pizza</label>
+      <label><input type="checkbox" value="Pasta" />Pasta</label>
+      <label><input type="checkbox" value="Pap and Wors" />Pap and Wors</label>
+      <label><input type="checkbox" value="Other" />Other</label>
+    </fieldset>
+
+<fieldset class="ratings-section">
+  <legend>How often do you...</legend>
+
+  <p class="scale-info">
+    Please rate your level of agreement on a scale from 1 = Strongly Disagree, 5 = Strongly Agree
+  </p>
+
+  <table class="ratings-table">
+    <thead>
+      <tr>
+        <th>Activity</th>
+        <th>Strongly Disagree</th>
+        <th>Disagree</th>
+        <th>Neutral</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Activity">Eat Out</td>
+        <td data-label="Strongly Disagree"><label><input type="radio" name="eat_out" value="1" required></label></td>
+        <td data-label="Disagree"><label><input type="radio" name="eat_out" value="2"></label></td>
+        <td data-label="Neutral"><label><input type="radio" name="eat_out" value="3"></label></td>
+        <td data-label="Agree"><label><input type="radio" name="eat_out" value="4"></label></td>
+        <td data-label="Strongly Agree"><label><input type="radio" name="eat_out" value="5"></label></td>
+      </tr>
+      <tr>
+        <td data-label="Activity">Watch Movies</td>
+        <td data-label="Strongly Disagree"><label><input type="radio" name="watch_movies" value="1" required></label></td>
+        <td data-label="Disagree"><label><input type="radio" name="watch_movies" value="2"></label></td>
+        <td data-label="Neutral"><label><input type="radio" name="watch_movies" value="3"></label></td>
+        <td data-label="Agree"><label><input type="radio" name="watch_movies" value="4"></label></td>
+        <td data-label="Strongly Agree"><label><input type="radio" name="watch_movies" value="5"></label></td>
+      </tr>
+      <tr>
+        <td data-label="Activity">Watch TV</td>
+        <td data-label="Strongly Disagree"><label><input type="radio" name="watch_tv" value="1" required></label></td>
+        <td data-label="Disagree"><label><input type="radio" name="watch_tv" value="2"></label></td>
+        <td data-label="Neutral"><label><input type="radio" name="watch_tv" value="3"></label></td>
+        <td data-label="Agree"><label><input type="radio" name="watch_tv" value="4"></label></td>
+        <td data-label="Strongly Agree"><label><input type="radio" name="watch_tv" value="5"></label></td>
+      </tr>
+      <tr>
+        <td data-label="Activity">Listen to Radio</td>
+        <td data-label="Strongly Disagree"><label><input type="radio" name="listen_to_radio" value="1" required></label></td>
+        <td data-label="Disagree"><label><input type="radio" name="listen_to_radio" value="2"></label></td>
+        <td data-label="Neutral"><label><input type="radio" name="listen_to_radio" value="3"></label></td>
+        <td data-label="Agree"><label><input type="radio" name="listen_to_radio" value="4"></label></td>
+        <td data-label="Strongly Agree"><label><input type="radio" name="listen_to_radio" value="5"></label></td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
